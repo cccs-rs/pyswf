@@ -374,7 +374,7 @@ class SWFStream(object):
             s = self.f.read(1)
         try:
             return string.decode()
-        except as e:
+        except:
             return "Unknown"
     
     def readFILTER(self):
