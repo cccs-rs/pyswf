@@ -372,7 +372,10 @@ class SWFStream(object):
         while ord(s) > 0:
             string += s
             s = self.f.read(1)
-        return string.decode()
+        try:
+            return string.decode()
+        except as e:
+            return "Unknown"
     
     def readFILTER(self):
         """ Read a SWFFilter """
